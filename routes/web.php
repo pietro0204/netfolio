@@ -1,15 +1,11 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [LoginController::class, 'inicio']);
 
-Route::get('/acc', function () {
-    return view('acc');
-});
+Route::get('/perfil', [LoginController::class, 'perfil']);
 
 Route::get('/login', [LoginController::class, 'login' ]);

@@ -6,9 +6,20 @@ use Illuminate\Routing\Controller as BaseController;
 
 class LoginController extends BaseController
 {
-    public function login()
-
+  public function login()
   {
     return view('login');
+  }
+
+  public function inicio()
+  {
+
+    return view('index');
+  }
+
+  public function perfil()
+  {
+
+    return view('acc');
   }
 }
