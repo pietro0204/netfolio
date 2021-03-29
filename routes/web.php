@@ -9,3 +9,5 @@ Route::get('/', [LoginController::class, 'inicio']);
 Route::get('/perfil', [LoginController::class, 'perfil']);
 
 Route::get('/login', [LoginController::class, 'login' ]);
+
+Route::get('/cad', [LoginController::class, 'cad' ]);

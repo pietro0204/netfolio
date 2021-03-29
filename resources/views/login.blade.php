@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-  <title>Login Pietro</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -48,21 +48,22 @@
 
       <div class="card-body">
 
+      <div>
+
+      <h3>LOGIN</h3>
+      </div>
+
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email </label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="exampleInputEmail1" class="form-label"></label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-          <div id="passwordHelp" class="form-text">Não compartilhe sua senha com ninguem.</div>
+          <label for="exampleInputPassword1" class="form-label"></label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Não sou um robo.</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+       
+        <button type="submit" class="btn btn-primary">LOGIN</button>
 
       </div>
     </div>

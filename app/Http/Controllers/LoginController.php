@@ -22,4 +22,10 @@ class LoginController extends BaseController
 
     return view('acc');
   }
+
+  public function cad()
+  {
+
+    return view('cad');
+  }
 }
