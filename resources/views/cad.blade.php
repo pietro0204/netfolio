@@ -14,6 +14,10 @@
 
 <body>
 
+
+    <!-- CABECALHO !-->
+    <!-- MENU SUPERIOR NAVBAR  !-->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
 
@@ -40,6 +44,7 @@
 
 
 
+    <!-- CARTAO DE FORMULARIO PARA CADASTRO !-->
 
     <center>
 
@@ -48,8 +53,8 @@
 
             <div class="card-body">
 
-
-            <div>
+                <!-- FORMULARIO DO CADASTRO COM DIV BOOTSTRAP !-->
+                <!-- <div>
 
             <h3>CADASTRO</h3>
             </div>
@@ -75,7 +80,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">CADASTRAR</button>
+                <button type="submit" class="btn btn-primary">CADASTRAR</button> -->
 
             </div>
         </div>
@@ -84,6 +89,9 @@
 
 
     <!--  RODAPE !-->
+
+    
+    <!-- NAVBAR MENU INFERIOR !-->
     <footer>
 
         <div>
@@ -101,6 +109,8 @@
 
                     </ul>
                 </div>
+
+                <!-- REDES SOCIAIS RODAPE !-->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">

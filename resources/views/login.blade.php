@@ -13,7 +13,9 @@
 </head>
 
 <body>
+  <!--  CABECALHO !-->
 
+  <!-- NAVBAR MENU SUPERIOR !-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
 
@@ -39,39 +41,51 @@
   </nav>
 
 
+  <!-- CONTEUDO DE  CORPO !-->
+
+  <!-- CARTAO DE LOGIN EM DIV BOOTSTRAP!-->
 
 
-  <center>
+  <!--  <center>
 
 
     <div class="card" style="width: 18rem;">
 
       <div class="card-body">
 
-      <div>
+        <!-- CONTEUDO ! - - >
 
-      <h3>LOGIN</h3>
-      </div>
 
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"></label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+  <div>
 
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"></label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-        </div>
-       
-        <button type="submit" class="btn btn-primary">LOGIN</button>
+    <h3>LOGIN</h3>
+  </div>
 
-      </div>
-    </div>
+  <!-- EMAIL ! - ->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 
-  </center>
+    <!-- SENHA !- ->
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"></label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+  </div>
+
+  <!--  BOTAO !- ->
+  <button type="submit" class="btn btn-primary">LOGIN</button>
+
+  </div>
+  </div>
+
+  </center> !-->
 
 
   <!--  RODAPE !-->
+
+  
+    <!-- MENU NAVBAR INFERIOR  !--> 
   <footer>
 
     <div>
@@ -89,6 +103,9 @@
 
           </ul>
         </div>
+
+    <!-- REDES SOCIAS  !-->
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
