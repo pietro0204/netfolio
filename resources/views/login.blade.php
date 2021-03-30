@@ -46,16 +46,17 @@
   <!-- CARTAO DE LOGIN EM DIV BOOTSTRAP!-->
 
 
-  <!--  <center>
+   <center>
 
 
     <div class="card" style="width: 18rem;">
 
       <div class="card-body">
 
-        <!-- CONTEUDO ! - - >
+        <!-- CONTEUDO!-->
 
 
+    <!-- 
   <div>
 
     <h3>LOGIN</h3>
@@ -74,12 +75,12 @@
   </div>
 
   <!--  BOTAO !- ->
-  <button type="submit" class="btn btn-primary">LOGIN</button>
+  <button type="submit" class="btn btn-primary">LOGIN</button> !-->
 
   </div>
   </div>
 
-  </center> !-->
+  </center> 
 
 
   <!--  RODAPE !-->
