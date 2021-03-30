@@ -8,6 +8,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/cad.css">
+
+
 
   <title>Login</title>
 </head>
@@ -20,14 +23,14 @@
     <div class="container-fluid">
 
       <a class="navbar-brand" href="index.html">
-        <img src="logo.png" width="70" height="70" alt="">
+        <img src="/img/logo.png" width="70" height="70" alt="">
       </a>
 
-      <form class="d-flex">
+      <div>
         <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-      </form>
+      </div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item position-absolute end-0">
             <a class="nav-link active" aria-current="page" href="acc.html">Minha Conta</a>
@@ -43,50 +46,39 @@
 
   <!-- CONTEUDO DE  CORPO !-->
 
-  <!-- CARTAO DE LOGIN EM DIV BOOTSTRAP!-->
+  
+    <!-- CARTAO DE FORMULARIO PARA CADASTRO !-->
+
+    <center class="login">
 
 
-   <center>
+<div class="card" style="width: 18rem;">
 
+    <div class="card-body">
 
-    <div class="card" style="width: 18rem;">
+    <!-- FORMULARIO DO CADASTRO COM HTML !-->
 
-      <div class="card-body">
-
-        <!-- CONTEUDO!-->
-
-
-    <!-- 
-  <div>
-
+    <form action="" method="">
     <h3>LOGIN</h3>
-  </div>
+        @csrf
+      
+        <input type="text" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">LOGIN</button>
 
-  <!-- EMAIL ! - ->
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+    </form>
 
-    <!-- SENHA !- ->
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"></label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-  </div>
+   
+    </div>
+        </div>
 
-  <!--  BOTAO !- ->
-  <button type="submit" class="btn btn-primary">LOGIN</button> !-->
-
-  </div>
-  </div>
-
-  </center> 
+    </center>
 
 
   <!--  RODAPE !-->
 
-  
-    <!-- MENU NAVBAR INFERIOR  !--> 
+
+  <!-- MENU NAVBAR INFERIOR  !-->
   <footer>
 
     <div>
@@ -105,7 +97,7 @@
           </ul>
         </div>
 
-    <!-- REDES SOCIAS  !-->
+        <!-- REDES SOCIAS  !-->
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

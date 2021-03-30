@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/cad.css">
+
 
     <title>Cadastro</title>
 </head>
@@ -22,14 +24,16 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="index.html">
-                <img src="logo.png" width="70" height="70" alt="">
+                <img src="/img/logo.png" width="70" height="70" alt="">
             </a>
 
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-            </form>
+            <div>
+            <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+           
+
+            <div >
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item position-absolute end-0">
                         <a class="nav-link active" aria-current="page" href="acc.html">Minha Conta</a>
@@ -49,48 +53,33 @@
     <center>
 
 
-        <div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
 
-            <div class="card-body">
+    <div class="card-body">
 
-                <!-- FORMULARIO DO CADASTRO COM DIV BOOTSTRAP !-->
-                <!-- <div>
+    <!-- FORMULARIO DO CADASTRO COM HTML !-->
 
-            <h3>CADASTRO</h3>
-            </div>
+    <form action="cadastrar" method="post">
+    <h3>CADASTRO</h3>
+        @csrf
+        <input type="text" name="nome" placeholder="@Nome de Usuario" required>
+        <input type="text" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="password" name="confirmesenha" placeholder="Confirmar Senha" required>
+        <button type="submit">CADASTRAR</button>
 
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping">@</span>
-                    <input type="text" class="form-control" placeholder="Nome do Usuario" aria-label="Nome do Usuario" aria-describedby="addon-wrapping">
-                </div>
+    </form>
 
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"placeholder="Senha">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirme Senha">
-                </div>
-
-
-                <button type="submit" class="btn btn-primary">CADASTRAR</button> -->
-
-            </div>
+   
+    </div>
         </div>
 
-    </center>
+    </center style="padding: 80px;">
 
 
     <!--  RODAPE !-->
 
-    
+
     <!-- NAVBAR MENU INFERIOR !-->
     <footer>
 

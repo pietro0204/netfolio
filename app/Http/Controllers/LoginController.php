@@ -20,7 +20,7 @@ class LoginController extends BaseController
   public function perfil()
   {
 
-    return view('acc');
+    return view('perfil');
   }
 
   public function cad()
