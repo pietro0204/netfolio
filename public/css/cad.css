@@ -1,0 +1,36 @@
+
+center {
+    padding: 65px;
+}
+
+center.login {
+    padding: 115px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 0px solid black;
+}
+
+form > * {
+    margin: 10px;
+    text-align: center;
+}
+
+input{
+
+    padding: 7px 14px;
+    border: 1px solid #949494;
+    border-radius: 5px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 7px 14px;
+    border: none;
+    background-color: #5a5a5a;
+    text-transform: uppercase;
+    color: #fff;
+
+}
