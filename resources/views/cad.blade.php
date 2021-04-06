@@ -22,26 +22,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.blade.php">
                 <img src="/img/logo.png" width="70" height="70" alt="">
             </a>
-
-            <div>
+            <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+            </form>
 
-            </div>
-
-
-            <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item position-absolute end-0">
-                        <a class="nav-link active" aria-current="page" href="acc.html">Minha Conta</a>
-                    </li>
-                </ul>
-            </div>
-
-
+            <span class="navbar-text">
+                <a href="/perfil" class="nav-link">Minha Conta</a>
+            </span>
+        </div>
         </div>
         </div>
     </nav>
@@ -80,41 +71,18 @@
     <!--  RODAPE !-->
 
 
-    <!-- NAVBAR MENU INFERIOR !-->
+    <!-- MENU NAVBAR INFERIOR  !-->
     <footer>
 
         <div>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Quem Somos?</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Somos uam empresa...</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- REDES SOCIAIS RODAPE !-->
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item position-absolute end-0">
-
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-instagram-square"></i>
-                            <i class="fab fa-twitter-square"></i>
-
-
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
+                <span class="navbar-text">
+                    <a href="#" class="nav-link"><span>&#169;</span> NETFOLIO Todos os direitos reservados.</a>
+                </span>
+        </div>
+        </div>
+        </nav>
 
         </div>
     </footer>

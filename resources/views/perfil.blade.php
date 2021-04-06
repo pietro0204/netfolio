@@ -18,24 +18,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-
             <a class="navbar-brand" href="index.html">
-                <img src="logo.png" width="70" height="70" alt="">
+                <img src="/img/logo.png" width="70" height="70" alt="">
             </a>
-
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
             </form>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item position-absolute end-0">
-                        <a class="nav-link active" aria-current="page" href="acc.html">Minha Conta</a>
-                    </li>
-                </ul>
-            </div>
-
-
+            <span class="navbar-text">
+                <a href="acc.html" class="nav-link">Minha Conta</a>
+            </span>
+        </div>
         </div>
         </div>
     </nav>
@@ -45,220 +38,204 @@
     </div>
     </nav>
 
-    <div>
-
+    <div class="info">
         <h3>Meu Portifolio</h3>
-    </div>
-
-    <!--  CONTEUDO DO CORPO !-->
-
-    <!-- CARTOES DE  ARTES !-->
-
-
-
-    <div class="row mb-5">
-
-        <div class="col-sm-4">
-
-
+        <!--  CONTEUDO DO CORPO !-->
+        <!--  ARTES !-->
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3">
+            <!--
+        AQUI VOCE PODE ALTERAR
+        organização dos grids responsivos:
+        row-cols-2: Exibe dois cards quando a tela é < 576px
+        row-cols-sm-3: Exibe tres cards quando a tela é intermediária (tables) >= 576 e < 768
+        row-cols-md-2: Exibe dois cards para telas com tamanho >= 768 e < 992px
+        row-cols-lg-3: Exibe três cards para telas com tamanho >= 992 e < 1200px
+        row-cols-xl-3: Exibe tres cards para telas com tamanho >= 1200 e < 1400px
+        row-cols-xxl-3: Exibe tres cards para telas com tamanho >= 1400
         
-    <!--  CARTAO 1 PARA ENVIO COM MODAL EM BOOTSTRAP !-->
-            <div class="card">
-
-                <div class="card-body">
-                    <center><i class="fas fa-plus fa-6x"></i></center>
+        -->
+            <!-- AINDA NÃO DESCOBRI O PORQUE DO MODAL NÃO FUNCIONAR -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plus fa-6x justify-content-center"></i>
+                    </div>
+                    <!-- Botão do Modal-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#enviarArte">
+                        Enviar Arte
+                    </button>
                 </div>
-
-                <!-- Botão do Modal-->
-                <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Enviar Arte
-                </a>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+            </div>
+            <div class="modal fade" id="enviarArte" tabindex="-1" role="dialog" aria-labelledby="enviarArteCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Clique para enviar a Arte</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores, delectus voluptatem animi eius esse quibusdam perferendis, rerum illum earum magni ad deleniti laborum fugit nobis iste itaque. Cupiditate, ducimus!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
-
             </div>
+            <!-- Modal -->
 
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/1.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <!-- INSERIDO LINHA COM 2 COLUNAS PARA ACOMODAR AS INFORMAÇÕES -->
+                        <div class="row">
+                            <!-- PRIMEIRA COLUNA -->
+                            <div class="col">
+                                Data / Hora
+                            </div>
+                            <!-- FIM PRIMEIRA COLUNA -->
+
+                            <!-- SEGUNDA COLUNA -->
+                            <div class="col">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <!-- FIM SEGUNDA COLUNA -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/2.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <!-- INSERIDO LINHA COM 2 COLUNAS PARA ACOMODAR AS INFORMAÇÕES -->
+                        <div class="row">
+                            <!-- PRIMEIRA COLUNA -->
+                            <div class="col">
+                                Data / Hora
+                            </div>
+                            <!-- FIM PRIMEIRA COLUNA -->
+
+                            <!-- SEGUNDA COLUNA -->
+                            <div class="col">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <!-- FIM SEGUNDA COLUNA -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/3.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <!-- INSERIDO LINHA COM 2 COLUNAS PARA ACOMODAR AS INFORMAÇÕES -->
+                        <div class="row">
+                            <!-- PRIMEIRA COLUNA -->
+                            <div class="col">
+                                Data / Hora
+                            </div>
+                            <!-- FIM PRIMEIRA COLUNA -->
+
+                            <!-- SEGUNDA COLUNA -->
+                            <div class="col">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <!-- FIM SEGUNDA COLUNA -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/4.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <!-- INSERIDO LINHA COM 2 COLUNAS PARA ACOMODAR AS INFORMAÇÕES -->
+                        <div class="row">
+                            <!-- PRIMEIRA COLUNA -->
+                            <div class="col">
+                                Data / Hora
+                            </div>
+                            <!-- FIM PRIMEIRA COLUNA -->
+
+                            <!-- SEGUNDA COLUNA -->
+                            <div class="col">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <!-- FIM SEGUNDA COLUNA -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/5.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-footer text-center justify-content-center">
+                        <!-- INSERIDO LINHA COM 2 COLUNAS PARA ACOMODAR AS INFORMAÇÕES -->
+                        <div class="row">
+                            <!-- PRIMEIRA COLUNA -->
+                            <div class="col">
+                                Data / Hora
+                            </div>
+                            <!-- FIM PRIMEIRA COLUNA -->
+
+                            <!-- SEGUNDA COLUNA -->
+                            <div class="col">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <!-- FIM SEGUNDA COLUNA -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-    <!-- CARTAO 2 arte mias recente !-->
-        <div class="col-sm-4">
+        <!--  PAGINAÇAO !-->
+        <div>
+            <nav class="rodape position-center " aria-label="Page navigation example">
 
-            <div class="card">
-
-                <div class="card-body">
-                    <img src="img/1.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Data / Hora<i class="fas fa-trash-alt">
-    <!-- LIXEIRA !--></i></small>
-                </div>
-
-            </div>
-
+                <ul class="pagination justify-content-center pagination-lg">
+                    <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+                    <!-- Não existe anterior a primeira página -->
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item "><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item "><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
         </div>
-
-        
-    <!--  CARTAO 3 !-->
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-                <div class="card-body">
-                    <img src="img/2.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Data / Hora<i class="fas fa-trash-alt"></i></small>
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
-
-
-
-
-    <!-- LINHA DE BAIXO !-->
-    <div class="row mb-5">
-
-    <!-- CARTAO 1 !-->
-        <div class="col-sm-4">
-
-            <div class="card">
-
-                <div class="card-body">
-                    <img src="img/3.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Data / Hora<i class="fas fa-trash-alt"></i></small>
-                </div>
-
-            </div>
-
-        </div>
-
-    <!-- CARTAO 2  !-->
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-                <div class="card-body">
-                    <img src="img/4.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Data / Hora<i class="fas fa-trash-alt"></i></small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        
-    <!--  CARTAO 3 !-->
-        <div class="col-sm-4">
-
-            <div class="card">
-
-                <div class="card-body">
-                    <img src="img/5.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Data / Hora<i class="fas fa-trash-alt"></i></small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!--  PAGINAÇAO NUMERAÇÂO DA PAGINA !-->
-    <div>
-
-        <nav class="rodape position-absolute-center " aria-label="Page navigation example">
-
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-
-        </nav>
-
-    </div>
-
-
     <!--  RODAPE !-->
 
-    
-    <!-- NAVBAR MENU INFERIROR !-->
+
+
+    <!-- MENU NAVBAR INFERIOR  !-->
     <footer>
 
         <div>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Quem Somos?</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Somos uam empresa...</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-
-                
-    <!-- REDES SOCIAIS !-->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item position-absolute end-0">
-
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-instagram-square"></i>
-                            <i class="fab fa-twitter-square"></i>
-
-
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
+                <span class="navbar-text">
+                    <a href="#" class="nav-link"><span>&#169;</span> NETFOLIO Todos os direitos reservados.</a>
+                </span>
+        </div>
+        </div>
+        </nav>
 
         </div>
     </footer>
