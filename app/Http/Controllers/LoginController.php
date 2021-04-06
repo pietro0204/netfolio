@@ -47,6 +47,6 @@ class LoginController extends BaseController
       throw new Exception('E-mail já cadastrado!');
     }
     Usuario::cadastrar($params);
-    echo "CADASTRADO COM SUCESSO!";
+    return redirect("/login");
   }
 }
