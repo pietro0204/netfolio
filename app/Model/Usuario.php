@@ -19,6 +19,7 @@ class Usuario
             return null;
         }
     }
+    
     /* RETORNANDO PARA O BANCO OS DADOS PREENCHIDOS PELO USUARIO*/
     public static function cadastrar($dados)
     {

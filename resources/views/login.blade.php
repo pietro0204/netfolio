@@ -51,7 +51,7 @@
 
         <!-- FORMULARIO DO CADASTRO COM HTML !-->
 
-        <form action="" method="">
+        <form action="/logar" method="post">
           <h3>LOGIN</h3>
           @csrf
 

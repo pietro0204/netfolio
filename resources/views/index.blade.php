@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    Bem vindo, {{session('usuario'->nome)}}!
 
     <!--  CABECALHO !-->
 

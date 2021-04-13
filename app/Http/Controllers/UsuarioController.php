@@ -5,12 +5,28 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 use \Exception;
 use App\Model\Usuario;
+use Illuminate\Support\Facades\Redirect;
 
-class LoginController extends BaseController
+class UsuarioController extends BaseController
 {
   public function login()
   {
     return view('login');
+  }
+  public function logar()
+  {
+    $params = $_REQUEST;
+    /*VERIFICANDO SE E-MAIL ESTÁ CADASTRADO*/
+    $usuario = Usuario::buscarPorEmail($params['email']);
+    if (!$usuario) {
+      throw new Exception("Usuário não cadastrado!");
+    }
+    /*VERIFICANDO SE SENHA ESTÁ INCORRETA*/
+    if ($usuario->senha != $params['senha']) {
+      throw new Exception("Senha incorreta!");
+    }
+    session(['usuario'=> $usuario]);
+    return redirect("/");
   }
 
   public function inicio()
