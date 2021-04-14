@@ -1,3 +1,13 @@
+*{
+    
+    font-family: Arial;
+}
+
+body{
+  
+    background-image: url('/img/NetfolioBanner.png');
+}
+
 
 center {
     padding: 65px;

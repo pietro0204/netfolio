@@ -17,25 +17,27 @@
 <body>
 
 
-    <!-- CABECALHO !-->
-    <!-- MENU SUPERIOR NAVBAR  !-->
+    <!-- <!-- CABECALHO 
+    <!-- MENU SUPERIOR NAVBAR  
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.blade.php">
+            <a class="navbar-brand" href="/">
                 <img src="/img/logo.png" width="70" height="70" alt="">
             </a>
+           
+
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
             </form>
 
             <span class="navbar-text">
-                <a href="/perfil" class="nav-link">Minha Conta</a>
+                <a href="/login" class="nav-link"><button type="button">LOGIN</button></a>
             </span>
         </div>
         </div>
         </div>
-    </nav>
+    </nav> !-->
 
 
 
@@ -58,6 +60,7 @@
                     <input type="password" name="senha" placeholder="Senha" required>
                     <input type="password" name="confirmesenha" placeholder="Confirmar Senha" required>
                     <button type="submit">CADASTRAR</button>
+                    <a href="/login" class="nav-link">Já sou cadastrado!</a>
 
                 </form>
 
@@ -68,24 +71,24 @@
     </center style="padding: 80px;">
 
 
-    <!--  RODAPE !-->
+    <!-- <!--  RODAPE 
 
 
-    <!-- MENU NAVBAR INFERIOR  !-->
+    <!-- MENU NAVBAR INFERIOR  
     <footer>
 
         <div>
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <span class="navbar-text">
-                    <a href="#" class="nav-link"><span>&#169;</span> NETFOLIO Todos os direitos reservados.</a>
+                    <a href="#" class="nav-link"><span>&#169;</span> NETFOLIO. Seu portifolio na Web.</a>
                 </span>
         </div>
         </div>
         </nav>
 
         </div>
-    </footer>
+    </footer> !-->
 
 
 

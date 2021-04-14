@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    Bem vindo, {{session('usuario'->nome)}}!
+
 
     <!--  CABECALHO !-->
 
@@ -21,13 +21,21 @@
             <a class="navbar-brand" href="index.html">
                 <img src="/img/logo.png" width="70" height="70" alt="">
             </a>
+            
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
             </form>
 
             <span class="navbar-text">
-                <a href="acc.html" class="nav-link">Minha Conta</a>
+                @if(session('usuario'))
+                <a href="/perfil" class="nav-link">
+                {{ explode(' ', session('usuario')->nome)[0] }}
+                </a>
+                @else
+                <a href="/login" class="nav-link">Login</a>
+                @endif
             </span>
+
         </div>
         </div>
         </div>

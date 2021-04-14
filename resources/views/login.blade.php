@@ -16,25 +16,26 @@
 </head>
 
 <body>
-  <!--  CABECALHO !-->
+ <!-- <!--  CABECALHO
 
-  <!-- NAVBAR MENU SUPERIOR !-->
+  <!-- NAVBAR MENU SUPERIOR 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="/">
         <img src="/img/logo.png" width="70" height="70" alt="">
       </a>
+
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
       </form>
 
       <span class="navbar-text">
-        <a href="acc.html" class="nav-link">Minha Conta</a>
+      <a href="/cad" class="nav-link"><button type="button">CADASTRO</button></a>
       </span>
     </div>
     </div>
     </div>
-  </nav>
+  </nav> !-->
 
 
   <!-- CONTEUDO DE  CORPO !-->
@@ -58,6 +59,8 @@
           <input type="text" name="email" placeholder="E-mail" required>
           <input type="password" name="senha" placeholder="Senha" required>
           <button type="submit">LOGIN</button>
+          <a href="/cad" class="nav-link">Cadastre-se aqui!</a>
+
 
         </form>
 
@@ -68,10 +71,10 @@
   </center>
 
 
-  <!--  RODAPE !-->
+ <!-- <!--  RODAPE 
 
 
-  <!-- MENU NAVBAR INFERIOR  !-->
+  <!-- MENU NAVBAR INFERIOR  
   <footer>
 
     <div>
@@ -85,7 +88,7 @@
     </nav>
 
     </div>
-  </footer>
+  </footer>  !-->
 
 
 
