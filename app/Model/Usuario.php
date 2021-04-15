@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Support\Facades\DB;
+
 /*CADASTRO DE E-MAIL DO USUARIO NO BANCO*/
 
 class Usuario

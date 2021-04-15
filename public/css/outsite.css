@@ -1,31 +1,34 @@
 *{
-    
+    box-sizing: border-box;
     font-family: Arial;
+    text-align: inherit;
 }
 
 body{
-  
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url('/img/NetfolioBanner.png');
-}
-
-
-center {
-    padding: 65px;
-}
-
-center.login {
-    padding: 115px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    border: 0px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgb(0,0,0,0.53);
+    background-color: #dddddd;
+background-image: linear-gradient(315deg, #dddddd 0%, #ebebeb 74%);
+width: 250px;
 }
 
 form > * {
     margin: 10px;
-    text-align: center;
+    
 }
 
 input{

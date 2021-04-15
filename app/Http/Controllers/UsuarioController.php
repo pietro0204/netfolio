@@ -5,64 +5,38 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 use \Exception;
 use App\Model\Usuario;
-use Illuminate\Support\Facades\Redirect;
 
 class UsuarioController extends BaseController
 {
-  public function login()
-  {
-    return view('login');
-  }
-  public function logar()
-  {
-    $params = $_REQUEST;
-    /*VERIFICANDO SE E-MAIL ESTÁ CADASTRADO*/
-    $usuario = Usuario::buscarPorEmail($params['email']);
-    if (!$usuario) {
-      throw new Exception("Usuário não cadastrado!");
-    }
-    /*VERIFICANDO SE SENHA ESTÁ INCORRETA*/
-    if ($usuario->senha != $params['senha']) {
-      throw new Exception("Senha incorreta!");
-    }
-    session(['usuario'=> $usuario]);
-    return redirect("/");
-  }
-
-  public function inicio()
-  {
-
-    return view('index');
-  }
-
-  public function perfil()
-  {
-
-    return view('perfil');
-  }
-
   public function cad()
   {
-
     return view('cad');
   }
-  /*PARA VERIFICAR SE AS SENHAS DOS USUARIOS BATEM*/
-  public function cadusuario()
+  public function cadastrar()
   {
-    $params = $_REQUEST;
+      $params = $_REQUEST;
+      /*PARA VERIFICAR SE AS SENHAS DOS USUARIOS BATEM*/
+      if ($params['senha'] !== $params['confirmesenha']) {
+      throw new Exception('Senhas não são iguais!');
+      }
 
-    if ($params['senha'] !== $params['confirmesenha']) {
-      throw new Exception('Senhas não digitadas corretamente!');
-    }
-    if (strlen($params['senha']) < 6) {
+      /*PARA VERIFICAR SE AS SENHAS TEM 6 CARACTERES*/
+      if (strlen($params['senha']) < 6) {
       throw new Exception('A senha deve conter no minimo 6 caracteres!');
-    }
-    /*VERIFICAR SE O USUARIO JÁ É CADASTRADO*/
-    $usuarioMesmoEmail = Usuario::buscarPorEmail($params['email']);
-    if ($usuarioMesmoEmail !== null) {
+      }
+    
+    
+    
+      /*VERIFICAR SE O USUARIO JÁ É CADASTRADO*/
+      $usuarioMesmoEmail = Usuario::buscarPorEmail($params['email']);
+      if ($usuarioMesmoEmail !== null) {
       throw new Exception('E-mail já cadastrado!');
-    }
-    Usuario::cadastrar($params);
-    return redirect("/login");
+      }
+
+      /*EFETUAR CADASTRO CADASTRADO*/
+
+      Usuario::cadastrar($params);
+
+      echo "CADASTRADO COM SUCESSO!";
   }
 }

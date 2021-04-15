@@ -10,15 +10,24 @@ class IndexController extends BaseController
 
 public function inicio()
 {
-return view ('index');
+return view ('layouts.insite');
 }
 
 
+  public function perfil()
+  {
 
+    return view('perfil');
+  }
+  public function publi()
+  {
 
+    return view('publi');
+  }
 
+  public function cad()
+  {
 
-
-
-
+    return view('cad');
+  }
 }

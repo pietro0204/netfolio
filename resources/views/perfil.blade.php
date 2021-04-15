@@ -8,8 +8,13 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/indexperfil.css">
+    <link rel="stylesheet" href="/plugins/flex-modal/flex-modal.css">
+    <script src="/plugins/flex-modal/flex-modal.js"></script>
+    <link rel="stylesheet" href="/plugins/flex-loader/flex-loader.css">
+    <script src="/plugins/flex-loader/flex-loader.js"></script>
 
-    <title>Minha Conta</title>
+    <title>Perfil</title>
 </head>
 
 <body>
@@ -18,16 +23,36 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img src="/img/logo.png" width="70" height="70" alt="">
+                NETFOLIO
             </a>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <form class="d-flex">
+                        <input class="form-control me-4" type="search" placeholder="Pesquisar..." aria-label="Search">
+                    </form>
+                </li>
+            </ul>
+
 
             <span class="navbar-text">
-                <a href="acc.html" class="nav-link">Minha Conta</a>
+                @if(session('usuario'))
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/perfil" class="nav-link">
+                            {{ explode(' ', session('usuario')->nome)[0] }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Sair</a>
+                    </li>
+                </ul>
+                @else
+                <a href="/login" class="nav-link">Login</a>
+                @endif
             </span>
+
         </div>
         </div>
         </div>
@@ -54,38 +79,33 @@
         row-cols-xxl-3: Exibe tres cards para telas com tamanho >= 1400
         
         -->
-            <!-- AINDA NÃO DESCOBRI O PORQUE DO MODAL NÃO FUNCIONAR -->
+
             <div class="col">
                 <div class="card">
                     <div class="card-body text-center">
                         <i class="fas fa-plus fa-6x justify-content-center"></i>
                     </div>
                     <!-- Botão do Modal-->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#enviarArte">
+                    <button type="button" class="btn btn-primary" onclick="abrirModal()">
                         Enviar Arte
                     </button>
                 </div>
             </div>
-            <div class="modal fade" id="enviarArte" tabindex="-1" role="dialog" aria-labelledby="enviarArteCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Clique para enviar a Arte</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores, delectus voluptatem animi eius esse quibusdam perferendis, rerum illum earum magni ad deleniti laborum fugit nobis iste itaque. Cupiditate, ducimus!
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
+
+            <div style="display: none;">
+                <div id="cardfirst">
+                    <form>
+                        <input type="file" name="arquivo" placeholder="Arquivo" required>
+                        <input type="text" name="titulo" placeholder="Titulo" required>
+                        <input type="text" name="descricao" placeholder="Descricao" required>
+                        <button type="submit">Enviar</button>
+
+
+                    </form>
+
                 </div>
             </div>
-            <!-- Modal -->
+
 
             <div class="col">
                 <div class="card">
@@ -248,6 +268,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+    <script>
+        function abrirModal() {
+            FlexModal.show({
+                title: "Enviar uma Arte",
+                target: "#cardfirst",
+            });
+        }
+    </script>
 
 </body>
 
