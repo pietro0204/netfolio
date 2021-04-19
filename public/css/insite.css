@@ -35,7 +35,9 @@ header form button{
     border: none;
     background: none;
 }
-
+#conteudo{
+    flex-grow: 1;
+}
 footer{ 
     background-color: rgb(231, 231, 231);
     padding: 15px 20px;

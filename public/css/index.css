@@ -7,6 +7,11 @@
     padding: 10px;
    
 }
+.titulo{
+    text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
 .boxpubli{
     height: 300px;
     width: 250px;
@@ -19,19 +24,8 @@
 .boxpubli img{
     width: 250px;
     height: 250px;
-    padding: 10px;
-    
+}
 
-}
-.boxpubli span{
-    padding: 10px;
-    color: rgb(99, 99, 99);
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -10px;
-}
-.boxpubli span i{
-    padding: 10px;
+.boxpubli i{
+    padding: 30px;
 }

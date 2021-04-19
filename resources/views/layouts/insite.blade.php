@@ -50,41 +50,48 @@
 
     <!--  CONTEUDO DO CORPO !-->
 
-    <h3>DESTAQUES</h3>
+
 
     <div id="conteudo">
+        <div class="titulo">
+            <h1>Destaques</h1> <!-- TITULO 1 LINHA -->
+        </div>
 
-        <div class="boxpubli">
-            <img src="/img/3.jpg" alt="">
-            <span>
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-comment"></i>
-        </span>
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
+        <!-- CARTOES -->
+        <?php for ($i = 1; $i <= 4; $i++) { ?>
+
+            <div class="boxpubli">
+               <img src="/img/3.jpg" alt="">
+                
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                
+            </div>
+        <?php } ?>
 
     </div>
 
-    <h3>NOVIDADES</h3>
-
     <div id="conteudo">
+        <div class="titulo">
+            <h1>Novidades</h1> <!-- TITULO 2 LINHA -->
+        </div>
 
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
+        <!-- CARTOES -->
+        <?php for ($i = 1; $i <= 4; $i++) { ?>
+
+            <div class="boxpubli">
+               <img src="/img/3.jpg" alt="">
+                
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                
+            </div>
+        <?php } ?>
 
     </div>
+
 
     <!--  PAGINAÇAO !-->
     <div>
