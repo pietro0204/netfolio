@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/insite.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/plugins/flex-loader/flex-loader.css">
     <script src="/plugins/flex-loader/flex-loader.js"></script>
 
@@ -49,23 +50,30 @@
 
     <!--  CONTEUDO DO CORPO !-->
 
-
-    <!-- BOAS VINDAS AO USUARIO 
-
-    <div class="bemvindo">
-
-    <h4> Bem vindo, {{ session('usuario')->nome }}! </h4>
-    </div>
-
--->
-
-
-    <!--  DESTAQUES !-->
-
+    <h3>DESTAQUES</h3>
 
     <div id="conteudo">
 
-        <h3>DESTAQUES</h3>
+        <div class="boxpubli">
+            <img src="/img/3.jpg" alt="">
+            <span>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-comment"></i>
+        </span>
+        </div>
+        <div class="boxpubli">
+        </div>
+        <div class="boxpubli">
+        </div>
+        <div class="boxpubli">
+        </div>
+
+    </div>
+
+    <h3>NOVIDADES</h3>
+
+    <div id="conteudo">
 
         <div class="boxpubli">
         </div>
@@ -75,31 +83,23 @@
         </div>
         <div class="boxpubli">
         </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
-        <div class="boxpubli">
-        </div>
 
-        </div>
+    </div>
 
-        <!--  PAGINAÇAO !-->
-        <div>
-            <div class="rodape position-center " aria-label="Page navigation example">
+    <!--  PAGINAÇAO !-->
+    <div>
+        <div class="rodape position-center " aria-label="Page navigation example">
 
-                <ul class="pagination justify-content-center pagination-lg">
-                    <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
-                    <!-- Não existe anterior a primeira página -->
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item "><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item "><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </div>
+            <ul class="pagination justify-content-center pagination-lg">
+                <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+                <!-- Não existe anterior a primeira página -->
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item "><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item "><a class="page-link" href="#">Next</a></li>
+            </ul>
         </div>
+    </div>
     </div>
 
     <!--  RODAPE !-->
