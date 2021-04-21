@@ -12,7 +12,7 @@ class IndexController extends BaseController
 public function inicio()
 {
  $artes = Arte::mostrarArtes();
-return view ('layouts.insite',[
+return view ('index',[
   "artes" => $artes
 ]);
 

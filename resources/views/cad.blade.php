@@ -8,8 +8,8 @@
     <input type="text" name="email" placeholder="E-mail" required>
     <input type="password" name="senha" placeholder="Senha" required>
     <input type="password" name="confirmesenha" placeholder="Confirmar Senha" required>
-    <button type="submit">CADASTRAR</button>
-    <a href="/login">Já sou cadastrado!</a>
+    <button type="submit" onclick="FlexLoader.show()">CADASTRAR</button>
+    <a href="/login" onclick="FlexLoader.show()">Já sou cadastrado!</a>
 
 </form>
 @endsection

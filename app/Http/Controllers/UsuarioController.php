@@ -38,5 +38,7 @@ class UsuarioController extends BaseController
       Usuario::cadastrar($params);
 
       echo "CADASTRADO COM SUCESSO!";
+
+      return view('login');
   }
 }
