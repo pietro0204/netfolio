@@ -58,13 +58,13 @@
         </div>
 
         <!-- CARTOES -->
-        <?php foreach ($artes as $livro ) { ?>
+        <?php for ($i = 1; $i <= 4; $i++) { ?>
 
             <div class="boxpubli">
                <img src="/img/3.jpg" alt="">
                 
-                    <i class="fas fa-comment"><?php echo $arte->titulo ?></i>
-                    <i class="fas fa-comment"><?php echo $arte->desc ?></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
                     <i class="fas fa-comment"></i>
                 
             </div>
@@ -78,14 +78,13 @@
         </div>
 
         <!-- CARTOES -->
-        <?php foreach ($artes as $livro ) { ?>
-
+        <?php for ($i = 1; $i <= 4; $i++) { ?>
 
             <div class="boxpubli">
                <img src="/img/3.jpg" alt="">
                 
-                    <i class="fas fa-comment"><?php echo $arte->titulo ?></i>
-                    <i class="fas fa-comment"><?php echo $arte->desc ?></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
                     <i class="fas fa-comment"></i>
                 
             </div>
