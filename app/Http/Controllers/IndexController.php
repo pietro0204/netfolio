@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Arte;
 use Illuminate\Routing\Controller as BaseController;
 
 class IndexController extends BaseController
@@ -10,7 +11,11 @@ class IndexController extends BaseController
 
 public function inicio()
 {
-return view ('layouts.insite');
+ $artes = Arte::mostrarArtes();
+return view ('layouts.insite',[
+  "artes" => $artes
+]);
+
 }
 
 
@@ -19,6 +24,7 @@ return view ('layouts.insite');
 
     return view('perfil');
   }
+
   public function publi()
   {
 
