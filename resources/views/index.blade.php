@@ -13,17 +13,23 @@
     </div>
 
     <!-- CARTOES DAS ARTES -->
-    <?php for ($i = 1; $i <= 4; $i++) { ?>
+    <div class="linha">
 
-        <div class="boxpubli">
-            <a href="/publi"><img src="/img/3.jpg" alt=""></a>
+        <?php foreach ($artes as $A) { ?>
 
-            <i class="fas fa-comment"></i>
-            <i class="fas fa-comment"></i>
-            <i class="fas fa-comment"></i>
+            <div class="boxpubli">
 
-        </div>
-    <?php } ?>
+                <a href="/publi"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
+
+                <div class="linha">
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                </div>
+            </div>
+        <?php } ?>
+
+    </div>
 
 </div>
 
@@ -33,17 +39,23 @@
     </div>
 
     <!-- CARTOES -->
-    <?php for ($i = 1; $i <= 4; $i++) { ?>
+    <div class="linha">
 
-        <div class="boxpubli">
-            <img src="/img/3.jpg" alt="">
+        <?php foreach ($artes as $A) { ?>
 
-            <i class="fas fa-comment"></i>
-            <i class="fas fa-comment"></i>
-            <i class="fas fa-comment"></i>
+            <div class="boxpubli">
 
-        </div>
-    <?php } ?>
+                <a href="/publi"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
+
+                <div class="linha">
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-comment"></i>
+                </div>
+            </div>
+        <?php } ?>
+
+    </div>
 
 </div>
 

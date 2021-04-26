@@ -1,7 +1,7 @@
 #conteudo{
     flex-grow: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
@@ -12,18 +12,23 @@
   font-size: 30px;
   margin-bottom: 50px;
 }
+.linha{
+    display: flex;
+    flex-direction: row;
+}
 .boxpubli{
-    height: 300px;
     width: 250px;
     background-color: rgb(201, 201, 201);
     display: flex;
+    flex-direction: column;
     margin: 10px;
     border: 1px solid rgba(255, 255, 255, 0.815);
     border-radius: 10px;
 }
 .boxpubli img{
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    
 }
 
 .boxpubli i{
