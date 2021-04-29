@@ -4,48 +4,34 @@
 
 <link rel="stylesheet" href="/css/perfil.css">
 
+
 <!--  CONTEUDO DO CORPO !-->
 
 <div class="conteudo">
 
+    <h1>Meu Portifolio</h1>
 
-<div class="editarperfil">
+    <!-- LINHA DE TODO CONTEUDO -->
 
-<img src="/img/1.jpg" width="100" height="100"> foto do perfil
+    <div class="linha">
 
-<form action="">
-<input type="text">biografia
-</form>
+        <!-- BOTAO DO MODAL ADICIONAR UMA ARTE -->
 
-<i class="fas fa-comment"></i> icone de editar
+        <button class="btnadd" onclick="abrirModal()" onclick="FlexLoader.show()">
 
-</div>
+            <i class="fas fa-plus"></i>
+            <span>Adicionar uma Arte</span>
 
-    <div class="titulo">
-        <h3>Meu Portifolio</h3>
-
-    </div>
-
-
-<!-- CARTAO DE ENVIAR ARTE -->
-    <div class="boxenviar">
-        <i class="fas fa-plus fa-6x justify-content-center"></i>
-
-        <!-- Botão do Modal-->
-        <button type="button" onclick="abrirModal()" onclick="FlexLoader.show()">
-            Enviar Arte
         </button>
-    
-   
 
+        <!-- CONTEUDO DO MODAL ADICIONAR UMA ARTE -->
+        <div style="display: none;">
 
+            <form id="formenviar">
 
-    <div style="display: none;">
-        <div id="cardfirst">
-            <form class="formenviar">
                 <input type="file" name="arquivo" placeholder="Arquivo" required>
                 <input type="text" name="titulo" placeholder="Titulo" required>
-                <input type="text" name="descricao" placeholder="Descricao" required>
+                <textarea name="descricao" placeholder="Descrição"></textarea>
                 <button type="submit" onclick="FlexLoader.show()">Enviar</button>
 
 
@@ -53,21 +39,38 @@
 
         </div>
 
-        </div>
+        <!-- CAIXAS DAS ARTES -->
 
-        <!-- CARTOES -->
-        <?php for ($i = 1; $i <= 4; $i++) { ?>
+        <?php for ($i = 0; $i < 10; $i++) { ?>
 
-            <div class="boxpubli">
-                <img src="/img/3.jpg" alt="">
+            <div class="boxart">
 
-                <i class="fas fa-comment"></i>
-                <i class="fas fa-comment"></i>
-                <i class="fas fa-comment"></i>
+                
+                <span class="img" style="background-image: url('/img/3.jpg');"></span>
+                
+                <div class="linha">
+                    <span class="datahora">26/04/2021 22:25</span>
+                    <i class="fas fa-trash"></i>
+                </div>
 
             </div>
+
         <?php } ?>
 
     </div>
 
-    @endsection
+
+</div>
+
+<!-- SCRIPT MODAL -->
+
+<script>
+    function abrirModal() {
+        FlexModal.show({
+            title: "Enviar uma Arte",
+            target: "#formenviar",
+        });
+    }
+</script>
+
+@endsection

@@ -1,74 +1,67 @@
-#conteudo{
+.boxpubli{
+    width: 100%;
+    min-height: 535px;
+    background-color: white;
+    box-shadow: 0 0 6px 0 #00000038;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 5px;
+    max-height: calc(100vh - 210px);
+}
+
+.boxautor{
+    align-items: center;
+
+}
+.boxautor i{
+    font-size: 50px;
+    margin-right: 20px;
+
+}
+.boxautor h1{
+    margin: 0px;
+}
+.boxautor h2{
+    font-size: 90%;
+    font-style: italic;
+}
+.boxpubli .img{
     flex-grow: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #404040;
+}
+.coluna{
+    max-width: 390px;
+}
+.icones{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-   
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #c3c3c3;
 }
-.titulo{
-    text-align: center;
-  font-size: 30px;
-  margin-bottom: 50px;
+.icones i{
+    color: rgb(95, 95, 95);
 }
-.boxpubli{
-    height: 300px;
-    width: 250px;
-    background-color: rgb(201, 201, 201);
-    display: flex;
-    margin: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.815);
-    border-radius: 10px;
+.boxrolagem{
+    overflow-y: auto;
+    max-height: calc(100% - 140px);
 }
-.boxenviar{
-    height: 300px;
-    width: 250px;
-    background-color: rgb(201, 201, 201);
-    display: flex;
-    margin: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.815);
-    border-radius: 10px;
+.boxdescri{
+    font-style: italic;
+    padding: 20px;
+    display: block;
+    text-align: justify;
+    border-bottom: 1px solid #c3c3c3;
 }
-.boxpubli img{
-    width: 250px;
-    height: 250px;
+.boxComent{
+    padding: 20px;
 }
-
-.boxpubli i{
-    padding: 30px;
+.boxComent .texto{
+    margin-top: 10px;
 }
-
-.formenviar {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px 0 rgb(0,0,0,0.53);
-    background-color: #dddddd;
-background-image: linear-gradient(315deg, #dddddd 0%, #ebebeb 74%);
-width: 250px;
-}
-
-.formenviar > * {
-    margin: 10px;
-    
-}
-
-input{
-
-    padding: 7px 14px;
-    border: 1px solid #949494;
-    border-radius: 5px;
-}
-
-button {
-    border-radius: 5px;
-    padding: 7px 14px;
-    border: none;
-    background-color: #5a5a5a;
-    text-transform: uppercase;
-    color: #fff;
-
+.formComentario{
+    padding: 20px;
 }

@@ -57,20 +57,6 @@
 
     
 <!--  PAGINAÇAO  !-->
-<div>
-    <div class="rodape position-center " aria-label="Page navigation example">
-
-        <ul class="pagination justify-content-center pagination-lg">
-            <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
-            <!-- Não existe anterior a primeira página -->
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item "><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item "><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </div>
-</div>
-</div>
 
     <!--  RODAPE !-->
     <footer>
@@ -88,14 +74,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
     
-<script>
-    function abrirModal() {
-        FlexModal.show({
-            title: "Enviar uma Arte",
-            target: "#cardfirst",
-        });
-    }
-</script>
+
 
 
 </body>
