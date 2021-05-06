@@ -11,7 +11,13 @@ class IndexController extends BaseController
 
 public function inicio()
 {
- $artes = Arte::mostrarArtes();
+  if(@$_REQUEST['busca'] == ''){
+    $artes = Arte::mostrarArtes();
+  } else{
+    $artes = Arte::pesquisar($_REQUEST['busca']);
+  }
+
+
 return view ('index',[
   "artes" => $artes
 ]);

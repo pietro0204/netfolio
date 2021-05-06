@@ -27,11 +27,11 @@
         <!-- CONTEUDO DO MODAL ADICIONAR UMA ARTE -->
         <div style="display: none;">
 
-            <form id="formenviar">
-
-                <input type="file" name="arquivo" placeholder="Arquivo" required>
+            <form method="post" action="/arte/cadastrar" id="formenviar" enctype="multipart/form-data">
+                @csrf
                 <input type="text" name="titulo" placeholder="Titulo" required>
                 <textarea name="descricao" placeholder="Descrição"></textarea>
+                <input type="file" name="arquivo" accept= ".jpg, .png, .jpeg, .gif" placeholder="Arquivo" required>
                 <button type="submit" onclick="FlexLoader.show()">Enviar</button>
 
 
@@ -45,9 +45,9 @@
 
             <div class="boxart">
 
-                
+
                 <span class="img" style="background-image: url('/img/3.jpg');"></span>
-                
+
                 <div class="linha">
                     <span class="datahora">26/04/2021 22:25</span>
                     <i class="fas fa-trash"></i>

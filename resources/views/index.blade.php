@@ -39,14 +39,14 @@
     <h1>Novidades</h1> <!-- TITULO 2 LINHA -->
 
 
-    <!-- CARTOES -->
+    <!-- CARTOES NOVIDADES-->
     <div class="linha">
 
-        <?php foreach ($artes as $A) { ?>
+        <?php foreach ($artes as $N) { ?>
 
             <div class="boxpubli">
 
-                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
+                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($N->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
                     <i class="fas fa-eye"></i>

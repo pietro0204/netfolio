@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArteController;
+use App\Http\Controllers\ImgController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\LoginController;
@@ -16,3 +18,6 @@ Route::get('/', [IndexController::class, 'inicio']);
 Route::get('/perfil', [IndexController::class, 'perfil']);
 
 Route::get('/publi', [IndexController::class, 'publi']);
+
+Route:: post('/arte/cadastrar', [ArteController::class, 'cadastrar']);
+Route::get('/artes', [ArteController::class, 'listagem']);
