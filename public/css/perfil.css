@@ -1,3 +1,33 @@
+.perfil{
+    display: flex;
+    flex-direction: row;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    align-items: center;
+    min-width: 100%;
+}
+.perfil img{
+    border-radius: 1000px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.perfil form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.perfil form textarea{
+    margin-left: 10px;
+    min-width: 100%;
+    height: 60px;
+}
+.perfil form button{
+    margin-left: 10px;
+}
+.perfil i{
+    color: #868686;
+}
 .btnadd{
     width: 250px;
     min-height: 280px;
@@ -23,11 +53,14 @@
     margin: 20px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
-.boxart .img{
+.boxart a img{
     flex-grow: 1;
     background-size: cover;
     background-position: center;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
 }
 .boxart .linha{
     background-color: #efefef;
@@ -41,13 +74,19 @@
     color: rgb(95, 95, 95);
 }
 
-#formenviar {
+#formenviar,#formeditar {
 display: flex;
 flex-direction: column;
 padding: 10px;
 }
 
-#formenviar > * {
+#formenviar > * ,
+#formeditar > *{
     margin: 10px;
     
+}
+.editaExclui{
+    padding: 5px;
+    cursor: pointer;
+    background: none;
 }

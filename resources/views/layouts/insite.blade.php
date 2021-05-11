@@ -33,8 +33,8 @@
             NETFOLIO
         </a>
         <form action="/">
-            <input id="barraBusca" class="form-control me-4" type="search" name="busca" placeholder="Pesquise por uma arte ou artista..." aria-label="Search" onclick="FlexLoader.show()">
-            <button type="submit"></button>
+            <input id="barraBusca" class="form-control me-4" type="search" name="busca" placeholder="Pesquise por uma arte ou artista..." aria-label="Search" >
+            <button type="submit" onclick="FlexLoader.show()"></button>
         </form>
 
         @if(session('usuario'))

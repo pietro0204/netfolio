@@ -9,6 +9,19 @@
 
 <div class="conteudo">
 
+    <!-- LINHA DO PERFIL MENU DE EDIÇAO FOTO E BIOGRAFIA -->
+    <div class="linha">
+        <div class="perfil">
+
+            <img src="/img/3.jpg" alt=""><!-- IMAGEM DO PERFIL-->
+            <a href=""><i class="fas fa-edit"></i></a><!-- BOTAO EDITAR IMG PERFIL-->
+            <form>
+                <textarea name="biografia" placeholder="Biografia"></textarea><!-- CAIXA PRA BIO -->
+                <button type="submit" onclick="FlexLoader.show()">Salvar</button><!-- BOTAO SALVAR -->
+            </form>
+        </div>
+    </div>
+    <!-- PORTFOLIO -->
     <h1>Meu Portifolio</h1>
 
     <!-- LINHA DE TODO CONTEUDO -->
@@ -31,26 +44,41 @@
                 @csrf
                 <input type="text" name="titulo" placeholder="Titulo" required>
                 <textarea name="descricao" placeholder="Descrição"></textarea>
-                <input type="file" name="arquivo" accept= ".jpg, .png, .jpeg, .gif" placeholder="Arquivo" required>
+                <input type="file" name="arquivo" accept=".jpg, .png, .jpeg, .gif" placeholder="Arquivo" required>
                 <button type="submit" onclick="FlexLoader.show()">Enviar</button>
-
-
             </form>
-
         </div>
 
         <!-- CAIXAS DAS ARTES -->
 
-        <?php for ($i = 0; $i < 10; $i++) { ?>
+        <?php foreach ($artes as $a) { ?>
 
             <div class="boxart">
 
 
-                <span class="img" style="background-image: url('/img/3.jpg');"></span>
+                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($a->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
-                    <span class="datahora">26/04/2021 22:25</span>
-                    <i class="fas fa-trash"></i>
+                    <span class="datahora"><?php echo $a->datahora;  ?></span>
+                    <!-- BOTOES -->
+
+                    <!-- Editar -->
+                    <div class="editaExclui" onclick="abrirModalEditar(this)" onclick="FlexLoader.show()">
+                        <i class="fas fa-edit"></i>
+                        <div style="display: none;">
+                            <!-- CONTEUDO DO MODAL EDITAR ARTE -->
+
+                            <form method="post" action="/arte/editar" id="formeditar" enctype="multipart/form-data">
+                                @csrf
+                                <input value="<?php echo $a->titulo ?>" type="text" name="titulo" placeholder="Titulo" required>
+                                <textarea name="descricao" placeholder="Descrição"><?php echo $a->descricao ?></textarea>
+                                <button type="submit" onclick="FlexLoader.show()">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Excluir -->
+                    <a href="/arte/excluir?id=<?php echo $a->id; ?>" class="editaExclui"><i class="fas fa-trash"></i></a>
                 </div>
 
             </div>
@@ -70,6 +98,14 @@
             title: "Enviar uma Arte",
             target: "#formenviar",
         });
+    }
+
+    function abrirModalEditar(botaoclicado) {
+        FlexModal.show({
+            title: "Editar Arte",
+            target: botaoclicado.querySelector('#formeditar')
+        })
+
     }
 </script>
 

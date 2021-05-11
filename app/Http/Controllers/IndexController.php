@@ -9,26 +9,28 @@ class IndexController extends BaseController
 {
 
 
-public function inicio()
-{
-  if(@$_REQUEST['busca'] == ''){
-    $artes = Arte::mostrarArtes();
-  } else{
-    $artes = Arte::pesquisar($_REQUEST['busca']);
+  public function inicio()
+  {
+    if (@$_REQUEST['busca'] == '') {
+      $artes = Arte::mostrarArtes();
+    } else {
+      $artes = Arte::pesquisar($_REQUEST['busca']);
+    }
+
+
+    return view('index', [
+      "artes" => $artes
+    ]);
   }
-
-
-return view ('index',[
-  "artes" => $artes
-]);
-
-}
 
 
   public function perfil()
   {
+    $artes = Arte::buscarArteUsuario(session('usuario')->id);
 
-    return view('perfil');
+    return view('perfil', [
+      "artes" => $artes
+    ]);
   }
 
   public function publi()

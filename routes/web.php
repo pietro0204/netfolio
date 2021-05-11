@@ -20,4 +20,7 @@ Route::get('/perfil', [IndexController::class, 'perfil']);
 Route::get('/publi', [IndexController::class, 'publi']);
 
 Route:: post('/arte/cadastrar', [ArteController::class, 'cadastrar']);
+Route:: post('/arte/editar', [ArteController::class, 'editar']);
+Route:: get('/arte/excluir', [ArteController::class, 'excluir']);
+
 Route::get('/artes', [ArteController::class, 'listagem']);
