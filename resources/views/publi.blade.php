@@ -12,12 +12,13 @@
     <!-- LINHA DO AUTOR DA ARTE -->
 
     <div class="linha boxautor">
-        <i class="fas fa-user-circle"></i>
+        <img src="{{ $user->fotousu }}" alt=""><!-- IMAGEM DO PERFIL-->
+
 
         <span>
 
-            <h1>ARTE 001</h1>
-            <h2>por usuario 001 em 28/04/2021 as 19:35</h2>
+            <h1>{{ $arte->titulo }}</h1>
+            <h2>por {{ $user->nome }} em {{ $arte->datahora }}</h2>
 
         </span>
 
@@ -27,7 +28,7 @@
 
     <div class="boxpubli">
         <!-- IMAGEM -->
-        <span class="img" style="background-image: url('/img/3.jpg');"></span>
+        <span class="img" style="background-image: url('{{ $arte->arquivo }}');"></span>
         <!-- COLUNA DOS ICONES E COMENTARIOS -->
         <div class="coluna">
             <!-- ICONES-->
@@ -54,13 +55,7 @@
                 <!-- DESCRIÇÂO DA ARTE FEITA PELO ARTISTA-->
 
                 <span class="boxdescri">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not
-                    only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged.
-
+                    {{ $arte->descricao }}
                 </span>
 
                 <!-- CAIXA PARA TODOS OS COMENTARISO -->

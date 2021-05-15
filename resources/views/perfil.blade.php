@@ -13,12 +13,33 @@
     <div class="linha">
         <div class="perfil">
 
-            <img src="/img/3.jpg" alt=""><!-- IMAGEM DO PERFIL-->
-            <a href=""><i class="fas fa-edit"></i></a><!-- BOTAO EDITAR IMG PERFIL-->
-            <form>
-                <textarea name="biografia" placeholder="Biografia"></textarea><!-- CAIXA PRA BIO -->
-                <button type="submit" onclick="FlexLoader.show()">Salvar</button><!-- BOTAO SALVAR -->
-            </form>
+
+
+            <img src="{{ session('usuario')->fotousu }}" alt=""><!-- IMAGEM DO PERFIL-->
+
+
+
+            <span>
+                <h1>{{ session('usuario')->nome }}</h1>
+                <h2>{{ session('usuario')->bio }}</h2>
+            </span>
+
+            <!-- BOTAO EDITAR IMAGEM / PERFIL-->
+            <button class="editBio" onclick="abrirModalEditBio()" onclick="FlexLoader.show()">
+                <i class="fas fa-edit"></i>
+            </button>
+
+            <!-- CONTEUDO DO MODAL EDITAR UMA ARTE -->
+            <div style="display: none;">
+
+                <form method="post" action="/perfil/editar" id="editBio" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" name="arquivo" accept=".jpg, .png, .jpeg, .gif" placeholder="Arquivo" required>
+                    <input type="text" name="nome" value="{{ session('usuario')->nome }}" required>
+                    <textarea name="biografia" value="{{ session('usuario')->bio }}" placeholder="Biografia"></textarea>
+                    <button type="submit" onclick="FlexLoader.show()">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
     <!-- PORTFOLIO -->
@@ -70,6 +91,7 @@
 
                             <form method="post" action="/arte/editar" id="formeditar" enctype="multipart/form-data">
                                 @csrf
+                                <input type="hidden" name="id" value="{{ $a->id }}">
                                 <input value="<?php echo $a->titulo ?>" type="text" name="titulo" placeholder="Titulo" required>
                                 <textarea name="descricao" placeholder="Descrição"><?php echo $a->descricao ?></textarea>
                                 <button type="submit" onclick="FlexLoader.show()">Salvar</button>
@@ -104,6 +126,14 @@
         FlexModal.show({
             title: "Editar Arte",
             target: botaoclicado.querySelector('#formeditar')
+        })
+
+    }
+
+    function abrirModalEditBio(botaoeditbio) {
+        FlexModal.show({
+            title: "Editar Perfil",
+            target: '#editBio',
         })
 
     }

@@ -20,7 +20,7 @@
             <div class="boxpubli">
                 <!-- CAIXA DOS Cartão de Publicação -->
 
-                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
+                <a href="/publi?id={{ $A->id }}" onclick="FlexLoader.show()"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
                     <i class="fas fa-eye"></i>
@@ -46,7 +46,7 @@
 
             <div class="boxpubli">
 
-                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($N->arquivo); ?>" alt=""></a>
+                <a href="/publi?id={{ $N->id }}" onclick="FlexLoader.show()"><img src="<?php echo ($N->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
                     <i class="fas fa-eye"></i>

@@ -16,6 +16,7 @@ Route::post('/logar', [LoginController::class, 'logar']);
 Route::get('/', [IndexController::class, 'inicio']);
 
 Route::get('/perfil', [IndexController::class, 'perfil']);
+Route::post('/perfil/editar', [IndexController::class, 'editar']);
 
 Route::get('/publi', [IndexController::class, 'publi']);
 

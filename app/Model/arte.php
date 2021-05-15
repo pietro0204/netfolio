@@ -16,7 +16,7 @@ class Arte
   /* Função de pesquisar */
   public static function pesquisar($TermoDeBusca)
   {
-    $sql = "select * from artes where titulo like ? or  des like ?;";
+    $sql = "select * from artes where titulo like ? or  descricao like ?;";
     return DB::select($sql, ['%' . $TermoDeBusca . '%', '%' . $TermoDeBusca . '%']);
   }
   /* FUNCAO BUSCAR POR ID*/
@@ -43,8 +43,8 @@ public static function buscarArteUsuario($iddousuario)
   /* Função editar */
   public static function editar($dados)
   {
-    $sql ="update artes set titulo=? and descricao=?";
-    $params =[@$dados['titulo'], @$dados['descricao']];
+    $sql ="update artes set titulo=? , descricao=? where id=?";
+    $params =[@$dados['titulo'], @$dados['descricao'], $dados['id']];
     DB::update($sql, $params);
   }
   /* FUNCAO EXCLUIR */

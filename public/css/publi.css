@@ -1,3 +1,5 @@
+
+
 .boxpubli{
     width: 100%;
     min-height: 535px;
@@ -24,6 +26,12 @@
 .boxautor h2{
     font-size: 90%;
     font-style: italic;
+}
+.boxautor img{
+    border-radius: 1000px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
 }
 .boxpubli .img{
     flex-grow: 1;

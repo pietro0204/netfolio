@@ -31,6 +31,7 @@ class ArteController extends BaseController
   {
     
     Arte::editar([
+      "id" => $_REQUEST['id'],
       "titulo" => $_REQUEST['titulo'],
       "descricao" => $_REQUEST['descricao'],
     ]);
