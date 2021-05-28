@@ -13,10 +13,15 @@
     <div class="linha">
         <div class="perfil">
 
-            <img src="/img/3.jpg" alt=""><!-- IMAGEM DO PERFIL-->
+
+
+            <img src="{{ $user->fotousu }}" alt=""><!-- IMAGEM DO PERFIL-->
+
+
 
             <span>
-                aaaaaaa Aaaaaaaaaaaa aaaaaaaaaa a aaaaaaa a a aaaaaaaaaa aaaaaaaaaa
+                <h1>{{ $user->nome }}</h1>
+                <h2>{{ $user->bio }}</h2>
             </span>
 
         </div>
@@ -28,16 +33,18 @@
 
     <div class="linha">
 
-
         <!-- CAIXAS DAS ARTES -->
 
         <?php foreach ($artes as $a) { ?>
 
             <div class="boxart">
+
+
                 <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($a->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
                     <span class="datahora"><?php echo $a->datahora;  ?></span>
+
                 </div>
 
             </div>
@@ -48,5 +55,6 @@
 
 
 </div>
+
 
 @endsection

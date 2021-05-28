@@ -37,26 +37,27 @@ class Usuario
     /* RETORNANDO PARA O BANCO OS DADOS PREENCHIDOS PELO USUARIO*/
     public static function cadastrar($dados)
     {
-        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)";
-        $params = [
+        $novoid = DB::table("usuarios")->insertGetId([
             'nome' => $dados['nome'],
             'email' => $dados['email'],
             'senha' => $dados['senha'],
-        ];
-        DB::insert($sql, $params);
+        ]);
+        $novousu = DB::table("usuarios")->find($novoid);
+
+        return $novousu;
     }
 
     /* EDITAR OS DADOS(foto de perfil nome bio) PREENCHIDOS PELO USUARIO*/
     public static function editar($dados)
     {
         $sql = "update usuarios set nome = ? , bio = ? where id = ?";
-        $params = [$dados['nome'], $dados['bio'],$dados['id']];
+        $params = [$dados['nome'], $dados['bio'], $dados['id']];
         DB::update($sql, $params);
     }
-    public static function editarfoto($fotousu,$id)
+    public static function editarfoto($fotousu, $id)
     {
         $sql = "update usuarios set fotousu = ? where id = ?";
-        $params = [$fotousu,$id];
+        $params = [$fotousu, $id];
         DB::update($sql, $params);
     }
 }

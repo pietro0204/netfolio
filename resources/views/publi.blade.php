@@ -12,7 +12,8 @@
     <!-- LINHA DO AUTOR DA ARTE -->
 
     <div class="linha boxautor">
-        <img src="{{ $user->fotousu }}" alt=""><!-- IMAGEM DO PERFIL-->
+        <!-- IMAGEM DO PERFIL-->
+        <a href="/perfilpubli?id={{ $user->id }}"><img src="{{ $user->fotousu }}" alt=""></a>
 
 
         <span>
@@ -28,23 +29,23 @@
 
     <div class="boxpubli">
         <!-- IMAGEM -->
-        <span class="img" style="background-image: url('{{ $arte->arquivo }}');"></span>
+            <span class="img" style="background-image: url('{{ $arte->arquivo }}');"></span>
         <!-- COLUNA DOS ICONES E COMENTARIOS -->
         <div class="coluna">
             <!-- ICONES-->
             <div class="icones">
                 <div>
                     <i class="fas fa-eye"></i>
-                    <span>100</span>
+                    <span>{{ $arte->visualizacoes }}</span>
                 </div>
 
                 <div>
                     <i class="fas fa-heart"></i>
-                    <span>100</span>
+                    <span>{{ $arte->gostei }}</span>
                 </div>
                 <div>
                     <i class="fas fa-comment"></i>
-                    <span>100</span>
+                    <span>{{ count($comentarios) }}</span>
                 </div>
 
             </div>
@@ -62,29 +63,24 @@
 
                 <div class="boxTodosComentario">
 
-                    <?php for ($i = 1; $i < 5; $i++) { ?>
+                    <?php foreach ($comentarios as $c) { ?>
 
                         <div class="boxComent">
                             <!-- CAIXA DE COMENTAIRO -->
 
                             <div class="linha boxautor comentario">
                                 <!-- LINHA AUTOR DO COMENTARIO -->
-                                <i class="fas fa-user-circle"></i>
-
+                                <a href="/perfilpubli?id={{ $c->usuario->id }}"><img src="{{ $c->usuario->fotousu }}" alt=""></a>
                                 <span>
 
-                                    <h1>Nome Usuario</h1>
-                                    <h2>em 28/04/2021 as 19:35</h2>
+                                    <h1>{{ $c->usuario->nome }}</h1>
+                                    <h2>em {{ $c->datahora }}</h2>
 
                                 </span>
 
                             </div>
                             <div class="texto">
-                                <!-- TEXTO DO COMENTARIO -->
-                                It was popularised in the 1960s with
-                                the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                recently with desktop publishing software like Aldus PageMaker including
-                                versions of Lorem Ipsum.
+                                {{ $c->comentario }}
                             </div>
                             <hr>
                         </div>
@@ -95,18 +91,25 @@
             </div>
 
             <!-- LINHA DO FORMULARIO PARA ENVIAR COMENTARIO E LIKE -->
-
-            <form class="formComentario">
-                <input type="text" name="comentario" placeholder="comentario" required>
-                <button type="submit" onclick="FlexLoader.show()">
+            @if(session('usuario'))
+            <form class="formComentario" action="/publi/comentar" method="POST">
+                @csrf
+                <input type="text" name="comentario" placeholder="comentario" maxlength="400" required>
+                <input type="hidden" name="idarte" value="{{ $arte->id }}">
+                <button type="submit" name="enviarComentario" onclick="FlexLoader.show()">
                     <i class="fas fa-paper-plane"></i>
                 </button>
-                <button type="submit" onclick="FlexLoader.show()">
+
+                <input type="hidden" name="id" value="{{ $arte->id }}">
+            </form>
+            <form class="formGostei" action="/publi/gostei" method="POST">
+                @csrf
+                <button type="submit" name="gostei" onclick="FlexLoader.show()">
                     <i class="fas fa-heart"></i>
                 </button>
-
+                <input type="hidden" name="id" value="{{ $arte->id }}">
             </form>
-
+            @endif
         </div>
 
     </div>

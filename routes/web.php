@@ -19,9 +19,13 @@ Route::get('/perfil', [IndexController::class, 'perfil']);
 Route::post('/perfil/editar', [IndexController::class, 'editar']);
 
 Route::get('/publi', [IndexController::class, 'publi']);
+Route::post('/publi/gostei', [IndexController::class, 'gostei']);
+Route::post('/publi/comentar', [ArteController::class, 'inserircoment']);
 
 Route:: post('/arte/cadastrar', [ArteController::class, 'cadastrar']);
 Route:: post('/arte/editar', [ArteController::class, 'editar']);
 Route:: get('/arte/excluir', [ArteController::class, 'excluir']);
 
 Route::get('/artes', [ArteController::class, 'listagem']);
+
+Route::get('/perfilpubli', [IndexController::class, 'perfilpubli']);

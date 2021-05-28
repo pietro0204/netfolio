@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Arte;
+use App\Model\Comentario;
 use Illuminate\Routing\Controller as BaseController;
 
 
@@ -29,7 +30,7 @@ class ArteController extends BaseController
   }
   public function editar()
   {
-    
+
     Arte::editar([
       "id" => $_REQUEST['id'],
       "titulo" => $_REQUEST['titulo'],
@@ -43,5 +44,15 @@ class ArteController extends BaseController
     unlink($_SERVER['DOCUMENT_ROOT'] . $arte->arquivo);
     Arte::excluir($_REQUEST['id']);
     return redirect("/perfil");
+  }
+
+  public function inserircoment()
+  {
+    Comentario::inserir([
+      "idusuario" => session('usuario')->id,
+      "idarte" => $_REQUEST['idarte'],
+      "comentario" => $_REQUEST['comentario'],
+    ]);
+    return redirect("/publi?id={$_REQUEST['idarte']}");
   }
 }

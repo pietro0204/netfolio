@@ -25,8 +25,6 @@ class UsuarioController extends BaseController
       throw new Exception('A senha deve conter no minimo 6 caracteres!');
       }
     
-    
-    
       /*VERIFICAR SE O USUARIO JÁ É CADASTRADO*/
       $usuarioMesmoEmail = Usuario::buscarPorEmail($params['email']);
       if ($usuarioMesmoEmail !== null) {
@@ -35,10 +33,9 @@ class UsuarioController extends BaseController
 
       /*EFETUAR CADASTRO CADASTRADO*/
 
-      Usuario::cadastrar($params);
+      $novousu = Usuario::cadastrar($params);
 
-      echo "CADASTRADO COM SUCESSO!";
-
-      return view('login');
+      session(['usuario'=> $novousu]);
+      return redirect("/");
   }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Arte;
+use App\Model\Comentario;
 use App\Model\Usuario;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -56,18 +57,42 @@ class IndexController extends BaseController
 
   public function publi()
   {
+    Arte::addview($_REQUEST['id']);
     $arte = Arte::buscarid($_REQUEST['id']);
     $user = Usuario::buscarPorid($arte->idUsuario);
+    $comentarios = Comentario::buscar($arte->id);
+
+    foreach ($comentarios  as $c) {
+      $c->usuario = Usuario::buscarPorid($c->idusuario);
+    }
 
     return view('publi', [
       "arte" => $arte,
-      "user" => $user
+      "user" => $user,
+      "comentarios" => $comentarios,
     ]);
+  }
+
+  public function gostei()
+  {
+    Arte::addlike($_REQUEST['id']);
+
+    return back();
   }
 
   public function cad()
   {
 
     return view('cad');
+  }
+  public function perfilpubli()
+  {
+    $artes = Arte::buscarArteUsuario($_REQUEST['id']);
+    $user = Usuario::buscarPorid($_REQUEST['id']);
+
+    return view('perfilpubli', [
+      "artes" => $artes,
+      "user" => $user,
+    ]);
   }
 }

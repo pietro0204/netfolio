@@ -29,8 +29,8 @@
 }
 .boxautor img{
     border-radius: 1000px;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     padding: 10px;
 }
 .boxpubli .img{
@@ -66,10 +66,15 @@
 }
 .boxComent{
     padding: 20px;
+    padding-bottom: 0px;
 }
 .boxComent .texto{
     margin-top: 10px;
 }
 .formComentario{
+    display: inline-flex;
     padding: 20px;
+}
+.formGostei{
+    display: inline-flex;
 }
