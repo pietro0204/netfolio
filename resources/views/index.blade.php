@@ -22,11 +22,7 @@
 
                 <a href="/publi?id={{ $A->id }}" onclick="FlexLoader.show()"><img src="<?php echo ($A->arquivo); ?>" alt=""></a>
 
-                <div class="linha">
-                    <i class="fas fa-eye"></i>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-comment"></i>
-                </div>
+              
             </div>
         <?php } ?>
 
@@ -48,11 +44,7 @@
 
                 <a href="/publi?id={{ $N->id }}" onclick="FlexLoader.show()"><img src="<?php echo ($N->arquivo); ?>" alt=""></a>
 
-                <div class="linha">
-                    <i class="fas fa-eye"></i>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-comment"></i>
-                </div>
+                
             </div>
         <?php } ?>
 
