@@ -77,7 +77,7 @@
             <div class="boxart">
 
 
-                <a href="/publi" onclick="FlexLoader.show()"><img src="<?php echo ($a->arquivo); ?>" alt=""></a>
+                <a href="/publi?id=<?php echo $a->id ?>" onclick="FlexLoader.show()"><img src="<?php echo ($a->arquivo); ?>" alt=""></a>
 
                 <div class="linha">
                     <span class="datahora"><?php echo $a->datahora;  ?></span>
